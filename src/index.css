@@ -1,3 +1,13 @@
+/* App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +17,102 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.app:before {
+  content: '';
+  background: url('https://images.unsplash.com/photo-1613771404721-1f92d799e49f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: fixed;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+.app,
+.details {
+  text-align: center;
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.name {
+  font-family: 'Bagel Fat One';
+  color: rgb(216, 113, 113);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.image {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 2rem;
+}
+
+.height,
+.weight {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.search {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search1 {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+  width: 80%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .app {
+    margin-top: 2rem;
+  }
+  
+ 
 }

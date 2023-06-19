@@ -32,7 +32,7 @@ function App() {
           placeholder='Enter Pokemon name'
           value={searchTerm}
           onChange={event => setSearchTerm(event.target.value)}
-          onKeyPress={searchPokemon}
+          onKeyDown={searchPokemon}
         />
       </div>
      { data ? (<div className='details'>
